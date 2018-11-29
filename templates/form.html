@@ -1,7 +1,13 @@
+<script>
+function fillSeq() {
+  document.getElementById('seq').value = '>sp|Q9UHP9|SMPX_HUMAN\nMNMSKQPVSNVRAIQANINIPMGAFRPGAGQPPRRKECTPEVEEGVPPTSDEEKKPIPGA\nKKLPGPAVNLSEIQNIKSELKYVPKAEQ';
+}
+</script>
 <h1>Epitope prediction</h1>
 <h2>Enter your sequence</h2>
+<h3><a href="javascript:fillSeq();">[example]</a></h3>
 <form action="" method=get>
-<textarea name=seq cols=80 rows=30></textarea><br>
+<textarea id="seq" name=seq cols=80 rows=30></textarea><br>
 <input type=submit name="submit">
 </form>
 <br>

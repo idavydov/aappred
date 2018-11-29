@@ -18,7 +18,7 @@ def read_data(fn):
 
 if __name__ == '__main__':
     X_tr, Y_tr = read_data(sys.argv[1])
-    model = SVC(C=4, kernel='rbf', gamma=8, probability=True)
+    model = SVC(C=4, kernel='rbf', gamma=8, probability=True, tol=1e-6, random_state=1)
     model.fit(X_tr, Y_tr)
 
     with open(sys.argv[2], 'w') as out:

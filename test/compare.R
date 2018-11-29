@@ -5,8 +5,8 @@ str(ref.pred)
 str(cur.pred)
 
 summary(ref.pred$svm1 - cur.pred$svm1)
-##      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
-## -0.0052290  0.0001190  0.0007360  0.0007193  0.0013510  0.0048440
+##       Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+## -0.0031680  0.0000660  0.0004120  0.0004281  0.0007880  0.0032070
 
 summary(ref.pred$svm2 - cur.pred$svm2)
 ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.

@@ -1,4 +1,4 @@
-$def with (data, seq)
+$def with (data, seq, url='')
 $def style():
   <style media="screen" type="text/css">
     table td {
@@ -75,5 +75,5 @@ $seq
 
 <pre>
 <small>You can access machine-readable version of this page using csv=1 parameter.
-E.g.: http://www.bioinf.ru/aappred/predict?seq=SEQ&amp;csv=1</small>
+E.g.: $url?seq=SEQ&amp;csv=1</small>
 </pre>

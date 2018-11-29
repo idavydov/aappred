@@ -61,7 +61,7 @@ class predict:
                          pr2[i]))
 
         if inp.csv is None:
-            return render.predict(data, inp.seq)
+            return render.predict(data, inp.seq, web.ctx.home + web.ctx.path)
         else:
             return render_plain.predict_csv(data, plot_data(pr1, pr2) if not inp.img is None else None)
 

@@ -1,0 +1,79 @@
+$def with (data, seq)
+$def style():
+  <style media="screen" type="text/css">
+    table td {
+    padding-right: 50px;
+    }
+      table th {
+      text-align: left;
+    }
+    table {
+      font-family: monospace;
+      font-size: small;
+    }
+    div.open {
+      position: relative;
+      width: 0;
+      height: 0;
+    }
+    div.open a {
+      position: absolute;
+      font-family: monospace;
+      font-size: small;
+      top: -18px;
+      left: 775px;
+      text-decoration: none;
+    }
+  </style>
+$def chart():
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="/static/charts.js"></script>
+  <script type="text/javascript">
+    var window = 20;
+    var bigstep = 100;
+    var rawData = [
+        $for n, aa, svm1, svm2 in data:
+        [$n, $svm1, $svm2],
+    ];
+
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+  </script>
+
+$var css = style()
+$var js = chart()
+<!-- You can access machine-readable version of this page using csv=1 parameter.
+     Eg: http://www.bioinf.ru/aappred/predict?seq=SEQ&csv=1 -->
+<h1>Prediction</h1>
+<h2>Plot</h2>
+<div id="plots">
+</div>
+
+<h2>Raw data</h2>
+<table>
+<tr>
+<th>#
+<th>AA
+<th>SVM1
+<th>SVM2
+</tr>
+$for n, aa, svm1, svm2 in data:
+     <tr>
+     <td>$n 
+     <td>$aa 
+     <td>$svm1 
+     <td>$svm2 
+     </tr>
+</table>
+
+<h2>Sequence</h2>
+<pre>
+$seq
+</pre>
+
+<a href="/aappred/predict">Predict another one</a>
+
+<pre>
+<small>You can access machine-readable version of this page using csv=1 parameter.
+E.g.: http://www.bioinf.ru/aappred/predict?seq=SEQ&amp;csv=1</small>
+</pre>

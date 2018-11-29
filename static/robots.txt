@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /aappred/predict?*
+Disallow: /aappred/plot?*

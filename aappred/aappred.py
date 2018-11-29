@@ -14,6 +14,8 @@ step=1
 bigstep=100
 
 def do_predict(samples, many=True, rnd=5):
+    if not samples:
+        return []
     if many:
         props = gen_scales.calc_props(samples)
         pred = sk_predict.predict(props, model=sk_predict.props)

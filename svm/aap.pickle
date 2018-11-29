@@ -131,7 +131,7 @@ Rp53
 tp54
 g23
 I00
-S'\x99\x8eu\xde\xd2\x8e\xf4\xbf'
+S'H\xc3\x8c\xcaa\xfb\xf4\xbf'
 p55
 tp56
 bsS'_sparse'
@@ -156,13 +156,14 @@ p63
 tp64
 bsS'random_state'
 p65
-NsS'_sklearn_version'
+I1
+sS'_sklearn_version'
 p66
 S'0.19.1'
 p67
 sS'tol'
 p68
-F0.001
+F1e-06
 sS'coef0'
 p69
 F0.0
@@ -294,7 +295,7 @@ Rp118
 tp119
 g23
 I00
-S'\xa4I\x15\xeb\xe2\xc3\x90?'
+S'\x17W\xb0\xb6\xd4\x02\x90?'
 p120
 tp121
 bsS'cache_size'

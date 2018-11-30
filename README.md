@@ -1,5 +1,5 @@
 # About
-AAPPred epitope prediction software based on algorithm described in the article [Prediction of linear B-cell epitopes using amino acid pair antigenicity scale](http://www.ncbi.nlm.nih.gov/pubmed/17252308).
+AAPPred epitope prediction software based on the algorithm described in the article [Prediction of linear B-cell epitopes using amino acid pair antigenicity scale](http://www.ncbi.nlm.nih.gov/pubmed/17252308).
 
 We have implemented two modes: first (SVM1) one is based on amino acids pair (AAP) frequencies and classical amino acids scales such as hydrophilicity, flexibility, etc. SVM2 uses only AAP frequencies to predict epitopes.
 

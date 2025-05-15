@@ -21,5 +21,5 @@ if __name__ == '__main__':
     model = SVC(C=4, kernel='rbf', gamma=8, probability=True, tol=1e-6, random_state=1)
     model.fit(X_tr, Y_tr)
 
-    with open(sys.argv[2], 'w') as out:
+    with open(sys.argv[2], 'wb') as out:
         dump(model, out)

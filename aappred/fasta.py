@@ -30,7 +30,7 @@ class fasta:
 
 	def split(self,wl=20,st=1):
 		ret_list=[]
-		for i in xrange(0,len(self.sequence)-wl+1,st):
+		for i in range(0,len(self.sequence)-wl+1,st):
 			ret_list.append(self.sequence[i:i+wl])
 
 		return ret_list

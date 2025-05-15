@@ -6,9 +6,9 @@ def calc_2d_val(seq, sca):
 	mx=max(sca.values())
 	mn=min(sca.values())
 	r=0.0
-	for i in xrange(len(seq)-1):
+	for i in range(len(seq)-1):
 		key=seq[i:i+2]
-		if sca.has_key(key):
+		if key in sca:
 			r+=sca[seq[i:i+2]]
 		else:
 			r+=0.5 #middle
@@ -19,9 +19,9 @@ def calc_1d_val(seq, sca):
 	mx=max(sca.values())
 	mn=min(sca.values())
 	r=0.0
-	for i in xrange(len(seq)):
+	for i in range(len(seq)):
 		key=seq[i]
-		if sca.has_key(key):
+		if key in sca:
 			r+=sca[seq[i]]
 		else:
 			r+=0.5 #middle

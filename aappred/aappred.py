@@ -28,11 +28,11 @@ def do_predict(samples, many=True, rnd=5):
 
 def plot_data(pr1, pr2):
     subplots = []
-    for i in xrange(0,len(pr1),bigstep):
+    for i in range(0,len(pr1),bigstep):
         sdata=""
-        for j in xrange(i,min(len(pr1),i+bigstep+1)):
-            sdata+="%d:%f:%f,"%((j*step+window/2),pr1[j],pr2[j])
-        subplots.append((i+window/2,i+window/2+bigstep,sdata))
+        for j in range(i,min(len(pr1),i+bigstep+1)):
+            sdata+="%d:%f:%f,"%((j*step+window//2),pr1[j],pr2[j])
+        subplots.append((i+window//2,i+window//2+bigstep,sdata))
     return subplots
 
 class index:
@@ -54,9 +54,9 @@ class predict:
         pr1=do_predict(parts,many=True)
         pr2=do_predict(parts,many=False)
         data = []
-        for i in xrange(len(pr1)):
-            data.append(((i*step+window/2),
-                         f.sequence[i*step+window/2].upper(),
+        for i in range(len(pr1)):
+            data.append(((i*step+window//2),
+                         f.sequence[i*step+window//2].upper(),
                          pr1[i],
                          pr2[i]))
 

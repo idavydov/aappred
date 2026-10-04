@@ -2,6 +2,10 @@ $def with (data, subplots)
 # AAPPred B-cell epitope prediction results.
 # http://www.bioinf.ru/aappred/
 # Version: 1.1
+# WARNING: This website and its prediction service will stop working soon.
+# Please use the source code to run AAPPred yourself:
+# Bitbucket: https://bitbucket.org/Davydov/aappred/
+# GitHub: https://github.com/idavydov/aappred
 N,AA,SVM1,SVM2
 $for n, aa, svm1, svm2 in data:$n,$aa,$svm1,$svm2
 $if not subplots is None:

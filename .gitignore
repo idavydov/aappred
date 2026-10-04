@@ -4,3 +4,4 @@
 *.o
 /ae/
 /lib/
+/.venv/
